@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<!-- saved from url=(0068)https://www.fs.usda.gov/nrs/atlas/tree/v4/modals/modfacs.php?spp=421 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>MODFACs (Modification Factors)</title>
+
+<style type="text/css">
+body {
+	font-family:"Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+}
+#modfac {
+	width: 940px;
+	height: 460px;
+	border: solid 1px #000000;
+	position: relative;	
+}
+#biological, #disturbance {
+	width:440px;
+	height:300px;
+	padding:5px;
+	clear: right;
+/*	border: solid 1px #000000;
+*/	display:block;
+}
+#biological {
+	float:left;
+}
+#disturbance {
+	float:right;
+}
+#biological div, #disturbance div {
+	display: block;
+	float: left;
+	clear: right;
+			margin:10px;
+	padding:10px;
+		position:absolute;
+		width:120px;
+		text-align:center;
+
+}
+#spp {
+	margin-top: 10px;
+	margin-bottom: 20px;
+	margin-left: 20px;
+	border: solid 1px #000000;
+	width: 170px;
+	padding-bottom:10px;
+	padding-left:10px;
+	
+}
+#spp div {
+	padding:5px;
+}
+	
+#a_score {
+	width:150px;
+	border: solid 1px #000000;
+}
+#bio-score, #dist-score
+{
+	width: 120px;
+	height: 120px;
+/*	background:#060;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	border-radius: 50px;
+*/	margin:0px !important;
+	padding:0px !important;
+	font-weight:bold;
+}
+.red {
+	background-image: url(/nrs/atlas/local-resources/images/red-modfac.gif);
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+.yellow {
+	background-image: url(/nrs/atlas/local-resources/images/yellow-modfac.gif);
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+.green {
+	background-image: url(/nrs/atlas/local-resources/images/green-modfac.gif);
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+.hi {
+	background-color:#009900;
+}
+.med {
+	background-color:#FFFF00;
+}
+.lo {
+	background-color:#FF0000;
+}
+.unc5 {
+	border:2px #000000 dashed !important;}
+.unc75 {
+	border:2px #000000 dotted !important;
+}
+.unc1 {
+	border:2px #000000 solid !important;
+}
+
+#bio-score {
+	border:none !important;
+	position:absolute;
+	left: 170px;
+	top: 215px;
+}
+#dist-score {
+	border:none !important;
+	position:absolute;
+	left: 650px;
+	top: 100px;
+}
+#bio-score p {
+	width:60px;
+	display:table;
+	position:relative;
+	top:20px;
+	left:20px;
+	text-align:center;
+}
+#dist-score p{
+	width:60px;
+	display:table;
+	position:relative;
+	top:20px;
+	left:15px;
+	text-align:center;
+}
+#co2prod {
+	left: 30px;
+	top: 310px;
+}
+#co2wue {
+	left: 10px;
+	top: 255px;
+}
+#shade {
+	left: 60px;
+	top: 365px;
+}
+#edaphic {
+	left: 220px;
+	top: 365px;
+}
+#envspec {
+	left: 290px;
+	top: 280px;
+}
+#dispersal {
+	left: 10px;
+	top: 205px;
+}
+#seedest {
+	left: 290px;
+	top: 205px;
+}
+#vegprod {
+	left: 220px;
+	top: 130px;
+}
+#firereg {
+	left: 60px;
+	top: 130px;
+}
+#disease {
+	left: 750px;
+	top: 200px;
+}
+#insects {
+	left: 775px;
+	top: 100px;
+}
+#browse {
+	left: 475px;
+	top: 100px;
+}
+#invasive {
+	left: 750px;
+	top: 50px;
+}
+#drought {
+	left: 550px;
+	top: 0px;
+}
+#flood {
+	left: 500px;
+	top: 50px;
+}
+#ice {
+	left: 500px;
+	top: 200px;
+}
+#wind {
+	left: 775px;
+	top: 150px;
+}
+#topkill {
+	left: 550px;
+	top: 250px;
+}
+#harvest {
+	left: 700px;
+	top: 0px;
+}
+#tempgrad {
+	left: 700px;
+	top: 250px;
+}
+#pollution {
+	left: 475px;
+	top: 150px;
+}
+
+	#scale {
+		padding-top:20px;
+	}
+	#scale div {
+		width: 100px;
+		display:block;
+		float:left;
+		clear:none;
+		text-align:center;
+		border:solid 1px #000000;
+	}
+	#uncertainty {
+		position:absolute;
+		bottom: 15px;
+		right: 10px;
+/*		padding-top:20px;
+		padding-right:10px;*/
+	}
+	.unc {
+		width: 140px;
+		display:block;
+		float:left;
+		clear:none;
+		text-align:center;
+		border:solid 1px #000000;
+		background-color:#999;
+	}
+.unc-label {
+	text-align:center;
+	clear:both;
+}
+		.val3 {
+		background-color:#238443;
+		color:#000;
+	}
+	.val2 {
+		background-color:#78C679;
+		color:#000;
+	}	
+	.val1 {
+		background-color:#C2E699;
+		color:#000;
+	}	
+	.val0 {
+		background-color:#FFFFB2;
+		color:#000;
+	}
+	.val-3 {
+		background-color:#E31A1C;
+		color:#000;
+	}
+	.val-2 {
+		background-color:#FD8D3C;
+		color:#000;
+	}	
+	.val-1 {
+		background-color:#FECC5C;
+		color:#000;
+	}
+</style>
+</head>
+
+<body>
+<div id="modfac">
+<div id="spp">
+	<div id="cn">American chestnut</div>
+	<div id="sn"><i>Castanea dentata</i></div>
+    <div id="a_score" class="usa-tooltip med" data-position="top">Adaptibility = 4.5</div></div>
+	
+  <div id="biological">
+<div id="bio-score" class="usa-tooltip yellow" data-position="top"><p>Biological <span>0.3</span></p></div>
+
+
+  </div>
+  <div id="disturbance">
+    <div id="dist-score" class="usa-tooltip yellow" data-position="top"><p>Disturbance <span>0.13</span></p></div>    <div id="co2prod" title="CO2 productivity Value: +1 Certainty: 0.5" class="usa-tooltip val1 unc5 usa-tooltip" data-position="top">CO2/PRD</div>
+<div id="co2wue" title="CO2 Water Use Efficiency Value: +1 Certainty: 0.75" class="usa-tooltip val1 unc75 usa-tooltip" data-position="top">CO2/WUE</div>
+<div id="shade" title="Shade Tolerance Value: +2 Certainty: 0.75" class="usa-tooltip val2 unc75 usa-tooltip" data-position="top">Shade Tolerance</div>
+<div id="edaphic" title="Edaphic Specificity Value: +1 Certainty: 0.75" class="usa-tooltip val1 unc75 usa-tooltip" data-position="top">Edaphic Specificity</div>
+<div id="envspec" title="Environmental Habitat Specificity Value: 0 Certainty: 0.75" class="usa-tooltip val0 unc75 usa-tooltip" data-position="top">Environmental Habitat Specificity</div>
+<div id="dispersal" title="Dispersal Value: +1 Certainty: 0.5" class="usa-tooltip val1 unc5 usa-tooltip" data-position="top">Dispersal</div>
+<div id="seedest" title="Seedling Establishment Value: +1 Certainty: 0.5" class="usa-tooltip val1 unc5 usa-tooltip" data-position="top">Seedling Establishment</div>
+<div id="vegprod" title="Vegetative Reproduction Value: +2 Certainty: 0.75" class="usa-tooltip val2 unc75 usa-tooltip" data-position="top">Vegetative Reproduction</div>
+<div id="firereg" title="Fire Regeneration Value: +1 Certainty: 0.75" class="usa-tooltip val1 unc75 usa-tooltip" data-position="top">Fire Regeneration</div>
+<div id="disease" title="Disease Value: -3 Certainty: 0.75" class="usa-tooltip val-3 unc75" data-position="top">Disease</div>
+<div id="insects" title="Insect Pests Value: -2 Certainty: 0.5" class="usa-tooltip val-2 unc5" data-position="top">Insects</div>
+<div id="browse" title="Browse Value: -1 Certainty: 0.75" class="usa-tooltip val-1 unc75" data-position="top">Browse</div>
+<div id="invasive" title="Invasive Plants Value: -2 Certainty: 0.5" class="usa-tooltip val-2 unc5" data-position="top">Invasive Plants</div>
+<div id="drought" title="Drought Value: +1 Certainty: 0.75" class="usa-tooltip val1 unc75" data-position="top">Drought</div>
+<div id="flood" title="Flood Value: -1 Certainty: 0.75" class="usa-tooltip val-1 unc75" data-position="top">Flood</div>
+<div id="ice" title="Ice Value: -1 Certainty: 0.5" class="usa-tooltip val-1 unc5" data-position="top">Ice</div>
+<div id="wind" title="Wind Value: -1 Certainty: 0.5" class="usa-tooltip val-1 unc5" data-position="top">Wind</div>
+<div id="topkill" title="Fire Topkill Value: -2 Certainty: 0.75" class="usa-tooltip val-2 unc75" data-position="top">Fire Topkill</div>
+<div id="harvest" title="Harvest Value: +1 Certainty: 0.5" class="usa-tooltip val1 unc5" data-position="top">Harvest</div>
+<div id="tempgrad" title="Temperature Gradients Value: +1 Certainty: 0.5" class="usa-tooltip val1 unc5" data-position="top">Temperature Gradients</div>
+<div id="pollution" title="Pollution Value: -1 Certainty: 0.75" class="usa-tooltip val-1 unc75" data-position="top">Pollution</div>
+
+  </div>
+<div id="uncertainty">
+	<div class="unc-label">Score Uncertainty</div>
+  	<div id="1-cert" class="unc1 unc">1-More Certainty</div>
+  	<div id="75-cert" class="unc75 unc">0.75</div>
+  	<div id="5-cert" class="unc5 unc">0.5-Less Certainty</div>
+	<div class="unc-label">Characteristic Score =<br>
+    Literature Score X Uncertainty X Future Relevance</div>
+  </div>
+
+</div>
+<div id="scale">
+  <div id="scale3" class="val3">V Hi Pos<br>+3</div>
+  	<div id="scale2" class="val2">High Pos<br>+2</div>
+  	<div id="scale1" class="val1">Low Pos<br>+1</div>
+  	<div id="scale0" class="val0">Minimal<br>0</div>
+  	<div id="scale-1" class="val-1">Low Neg<br>-1</div>
+  	<div id="scale-2" class="val-2">High Neg<br>-2</div>
+  	<div id="scale-3" class="val-3">V Hi Neg<br>-3</div>
+</div><br clear="all">
+<style>
+.hidewebpageurl {
+display: none;
+visibility: hidden;
+}
+</style>
+<div class="hidewebpageurl" id="webpage_url">https://www.fs.usda.gov/nrs/atlas/tree/v4/modals/modfacs.php?spp=421</div>
+
+</body></html>

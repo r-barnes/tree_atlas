@@ -1,0 +1,321 @@
+.sb {
+	display: none;
+	visibility: hidden;
+}
+
+.v4 {
+	background-color: #8FBC8B;
+}
+.v3 {
+	background-color: #00008b;
+	color: #FFFFFF !important;
+}
+.v2 {
+	background-color: #d49768;
+	color: #FFFFFF !important;
+}
+/*  remove excess padding at top */
+.usa-section {
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+}
+/*.usa-card__img img {
+		max-height: 382px !important;
+			align-content: center;
+	}*/
+.sb {
+    display: none;
+    visibility: hidden;
+}
+#query {
+    margin-top: 0px;
+    height: 2.0rem;
+}
+dt {
+    font-weight: bold;
+}
+.btn-sm {
+	font-size: 0.8rem;
+}
+nav.breadcrumb ol {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+    padding-bottom: 2em;
+}
+nav.breadcrumb li {
+    display: inline;
+}
+nav.breadcrumb li + li::before {
+    display: inline-block;
+    margin: 0 0.25em;
+    transform: rotate(15deg);
+    border-right: 0.1em solid currentColor;
+    height: 0.8em;
+    content: '';
+}
+nav.breadcrumb [aria-current="page"] {
+    color: #000;
+    font-weight: 700;
+    text-decoration: none;
+}
+.grid-container {
+    max-width: 84rem
+}
+#viewDiv {
+    padding: 0;
+    margin: 0;
+    height: 700px;
+    width: 100%;
+}
+#imgMap {
+    height: 767px;
+    height: 800px;
+    display: block;
+}
+.switch-field {
+    display: flex;
+    /* margin-bottom: 36px; */
+    /*  overflow: hidden;  */
+}
+.switch-field input {
+    position: absolute !important;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    width: 1px;
+    border: 0;
+    overflow: hidden;
+}
+.switch-field label {
+    background-color: #e4e4e4;
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 14px;
+    line-height: 1;
+    text-align: center;
+    padding: 8px 16px;
+    margin-right: -1px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
+    transition: all 0.1s ease-in-out;
+}
+label.disallow:hover {
+    cursor: not-allowed;
+}
+label.allow:hover {
+    cursor: pointer;
+}
+.switch-field input:checked + label {
+    background-color: #a5dc86;
+    box-shadow: none;
+}
+.switch-field label:first-of-type {
+    border-radius: 4px 0 0 4px;
+}
+.switch-field label:last-of-type {
+    border-radius: 0 4px 4px 0;
+}
+/* Model Reliability Styles */
+.usa-tag {
+	text-transform: none !important;
+}
+.High {
+    background-color: #33a532 !important;
+    
+}
+.Medium {
+    background-color: #fad201 !important;
+}
+.Low {
+    background-color: #ff0033 !important;
+}
+/* Experimental bar graph */
+.bar-container {
+    width: 100%;
+    clear: both;
+    font-size: smaller;
+    font-weight: bold;
+    vertical-align: middle;
+}
+.bar {
+    width: 100%;
+    height: 22px;
+    border-right: solid 1px black;
+    margin: 1px;
+    text-align: center;
+}
+.bar div {
+    height: 20px;
+    border: solid 1px black;
+    float: left;
+    clear: none;
+}
+.bar:nth-last-child(1) {
+    border-right: none;
+}
+#abundant {
+    background-color: #e6550d;
+    width: 30%;
+}
+#common {
+    background-color: #fdae6b;
+    width: 23%;
+}
+#rare {
+    background-color: #fee6ce;
+    width: 32%;
+}
+#absent {
+    background-color: white;
+    width: 15%;
+}
+#tooltip {
+    text-align: center;
+    color: #fff;
+    background: #808080;
+    position: absolute;
+    z-index: 100;
+    padding: 15px;
+}
+#tooltip:after /* triangle decoration */ {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #111;
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    margin-left: -10px;
+}
+#tooltip.top:after {
+    border-top-color: transparent;
+    border-bottom: 10px solid #111;
+    top: -20px;
+    bottom: auto;
+}
+#tooltip.left:after {
+    left: 10px;
+    margin: 0;
+}
+#tooltip.right:after {
+    right: 10px;
+    left: auto;
+    margin: 0;
+}
+/* Trait lists */
+
+#mods tbody tr td a {
+    text-decoration: none !important;
+}
+ul.traits {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    padding-bottom: 10px;
+}
+ul.traits li {
+    display: inline-block;
+    padding: 4px;
+    margin: 2px;
+		
+	/* As SVG does not provide a default visual style for links,
+   it's considered best practice to add some */
+
+@namespace svg url(http://www.w3.org/2000/svg);
+/* Necessary to select only SVG <a> elemnents, and not also HTML’s.
+   See warning below */
+
+svg|a:link, svg|a:visited {
+cursor: pointer;
+}
+svg|a text, text svg|a {
+fill: blue; /* Even for text, SVG uses fill over color */
+text-decoration: underline;
+}
+svg|a:hover, svg|a:active {
+outline: dotted 1px blue;
+}
+/* customized form */
+label {
+    display: inline-block;
+}
+#mapForm select {
+    border: none !important;
+}
+/* style drop downs */
+		/* class applies to select element itself, not a wrapper element */
+		
+.usa-label {
+    font-size: 16px;
+    font-family: sans-serif;
+    font-weight: 700;
+    color: #444;
+    line-height: 1.3;
+    margin-top: 0.5rem;
+    text-transform: uppercase;
+}
+.select-css {
+    display: block;
+    font-size: 16px;
+    font-family: sans-serif;
+    font-weight: 700;
+    color: #444;
+    line-height: 1.3;
+    padding: .6em 1.4em .5em .8em;
+    width: 100%;
+    max-width: 100%; /* useful when width is set to anything other than 100% */
+    box-sizing: border-box;
+    margin: 0;
+    border: 1px solid #aaa;
+    box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
+    border-radius: .5em;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #fff;
+    /* note: bg image below uses 2 urls. The first is an svg data uri for the arrow icon, and the second is the gradient. 
+		for the icon, if you want to change the color, be sure to use `%23` instead of `#`, since it's a url. You can also swap in a different svg icon or an external image reference
+		
+	*/
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'), linear-gradient(to bottom, #ffffff 0%, #e5e5e5 100%);
+    background-repeat: no-repeat, repeat;
+    /* arrow icon position (1em from the right, 50% vertical) , then gradient position*/
+    background-position: right .7em top 50%, 0 0;
+    /* icon size, then gradient */
+    background-size: .65em auto, 100%;
+}
+/* Hide arrow icon in IE browsers */
+.select-css::-ms-expand {
+display: none;
+}
+/* Hover style */
+.select-css:hover {
+    border-color: #888;
+}
+/* Focus style */
+.select-css:focus {
+    border-color: #aaa;
+    /* It'd be nice to use -webkit-focus-ring-color here but it doesn't work on box-shadow */
+    box-shadow: 0 0 1px 3px rgba(59, 153, 252, .7);
+    box-shadow: 0 0 0 3px -moz-mac-focusring;
+    color: #222;
+    outline: none;
+}
+/* Set options to normal weight */
+.select-css option {
+    font-weight: normal;
+}
+/* Support for rtl text, explicit support for Arabic and Hebrew */
+*[dir="rtl"] .select-css, :root:lang(ar) .select-css, :root:lang(iw) .select-css {
+    background-position: left .7em top 50%, 0 0;
+    padding: .6em .8em .5em 1.4em;
+}
+/* Disabled styles */
+.select-css:disabled, .select-css[aria-disabled=true] {
+    color: graytext;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22graytext%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'), linear-gradient(to bottom, #ffffff 0%, #e5e5e5 100%);
+}
+.select-css:disabled:hover, .select-css[aria-disabled=true] {
+    border-color: #aaa;
+}
