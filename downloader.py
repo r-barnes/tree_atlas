@@ -57,8 +57,13 @@ numbers = [Path(x).name for x in urls]
 #     assert x.isdigit()
 #     save_page(f"https://www.fs.usda.gov/nrs/atlas/tree/v4/modals/summary-change.php?spp={x}", "summary-change", load_wait=5, save_wait=1.5)
 
+# for x in tqdm.tqdm(numbers):
+#     assert x.isdigit()
+#     save_page(f"https://www.fs.usda.gov/nrs/atlas/tree/v4/modals/niche.php?spp={x}", "niche", load_wait=2, save_wait=1.5)
+
 for x in tqdm.tqdm(numbers):
     assert x.isdigit()
-    save_page(f"https://www.fs.usda.gov/nrs/atlas/tree/v4/modals/niche.php?spp={x}", "niche", load_wait=2, save_wait=1.5)
+    save_page(f"https://www.fs.usda.gov/nrs/atlas/tree/v4/modals/box-plots.php?spp={x}", "box_plots", load_wait=2, save_wait=0.5)
+
 
 
